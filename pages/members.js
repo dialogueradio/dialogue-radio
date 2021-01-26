@@ -3,7 +3,7 @@ import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Header from '../components/header'
 import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/graphcms'
+import { getAllPosts } from '../lib/graphcms'
 import Head from 'next/head'
 
 export default function Index({ posts, preview }) {
@@ -13,21 +13,11 @@ export default function Index({ posts, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Blog</title>
+          <title>Member</title>
         </Head>
         <Container>
           <Header />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <h2>Member Page</h2>
         </Container>
       </Layout>
     </>
@@ -35,7 +25,7 @@ export default function Index({ posts, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const posts = (await getAllPostsForHome(preview)) || []
+  const posts = (await getAllPosts(preview)) || []
   return {
     props: { posts, preview },
   }
