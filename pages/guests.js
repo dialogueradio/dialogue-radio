@@ -1,9 +1,8 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
 import Header from '../components/header'
 import Layout from '../components/layout'
-import { getAllPostse } from '../lib/graphcms'
+import { getAllPosts } from '../lib/graphcms'
 import Head from 'next/head'
 
 export default function Index({ posts, preview }) {
@@ -13,7 +12,7 @@ export default function Index({ posts, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Guest</title>
+          <title>Guests</title>
         </Head>
         <Container>
           <Header />

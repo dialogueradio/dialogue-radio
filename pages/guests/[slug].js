@@ -10,10 +10,10 @@ import Layout from 'components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/graphcms'
 import PostTitle from 'components/post-title'
 import Head from 'next/head'
+import { CMS_NAME } from 'lib/constants'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
-  console.log(post)
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -30,7 +30,7 @@ export default function Post({ post, morePosts, preview }) {
             <article>
               <Head>
                 <title>
-                  {post.title}
+                  {post.title} | Next.js Blog Example with {CMS_NAME}
                 </title>
                 {/* <meta property="og:image" content={post.ogImage.url} /> */}
               </Head>
@@ -51,16 +51,6 @@ export default function Post({ post, morePosts, preview }) {
   )
 }
 
-export async function getStaticPaths() {
-  const posts = await getAllPostsWithSlug()
-  return {
-    paths: posts.map(({ slug }) => ({
-      params: { slug },
-    })),
-    fallback: true,
-  }
-}
-
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
   return {
@@ -69,5 +59,15 @@ export async function getStaticProps({ params, preview = false }) {
       post: data.post,
       morePosts: data.morePosts || [],
     },
+  }
+}
+
+export async function getStaticPaths() {
+  const posts = await getAllPostsWithSlug()
+  return {
+    paths: posts.map(({ slug }) => ({
+      params: { slug },
+    })),
+    fallback: true,
   }
 }
