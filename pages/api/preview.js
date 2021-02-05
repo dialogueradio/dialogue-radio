@@ -1,3 +1,4 @@
+/*
 import { getPreviewPostBySlug } from '../../lib/graphcms'
 
 export default async function handler(req, res) {
@@ -26,3 +27,4 @@ export default async function handler(req, res) {
   res.writeHead(307, { Location: `/posts/${post.slug}` })
   res.end()
 }
+*/

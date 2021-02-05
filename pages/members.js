@@ -1,5 +1,6 @@
 import Container from '../components/container'
 import Header from '../components/header'
+import Layout from '../components/layout'
 import { getAllMembers } from '../lib/graphcms'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -7,6 +8,7 @@ import Link from 'next/link'
 export default function Members({ members }) {
   return (
     <>
+      <Layout>
         <Head>
           <title>Members</title>
         </Head>
@@ -27,6 +29,7 @@ export default function Members({ members }) {
           ))}
           </section>
         </Container>
+      </Layout>
     </>
   )
 }
