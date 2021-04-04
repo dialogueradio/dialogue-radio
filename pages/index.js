@@ -5,7 +5,6 @@ import Episodes from '../components/episodes'
 import PodcastPlatforms from '../components/podcast-platforms'
 import { getAllEpisodes } from '../lib/graphcms'
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function Index({ episodes }) {
   return (
