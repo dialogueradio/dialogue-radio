@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <header className="container flex flex-wrap py-6 mb-4">
       <div className="flex flex-col">
-        <h1 className="text-3xl font-bold">
+        <h1 className="specific-font text-3xl font-bold">
           <Link href="/">
             <a className="hover:underline">Dialogue Radio</a>
            </Link>

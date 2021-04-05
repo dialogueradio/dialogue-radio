@@ -16,8 +16,9 @@ export default function Index({ episodes }) {
         <Container>
           <Header />
           <div className="mt-10 mb-20">
-            <h2 className="mb-3 text-3xl text-center">ダイアログラジオとは？</h2>
-            <p className="text-center">ゲストと私たちパーソナリティーが、人生について多方面からカジュアルに語ることで、多様な考え方、働き方、生き方の発信を目指しています。</p>
+            <h2 className="mb-3 text-2xl font-bold text-center">ダイアログラジオとは？</h2>
+            <p className="text-center text-lg">ゲストと私たちパーソナリティーが、人生について多方面からカジュアルに語ることで</p>
+            <p className="text-center text-lg">多様な考え方、働き方、生き方の発信を目指しています</p>
           </div>
           <div className="flex">
             <PodcastPlatforms />
