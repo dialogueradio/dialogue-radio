@@ -20,7 +20,7 @@ const MenuBlock = ({ menuIsOpen }) => {
         }`}
       >
         {links.map(({ key, href, label }) => (
-          <li key={key} className="w-full py-2 md:w-auto md:py-auto">
+          <li key={key} className="w-full py-2 text-white md:w-auto md:py-auto">
             <Link href={href}>
               <a className="text-current">{label}</a>
             </Link>
@@ -42,14 +42,14 @@ const Header = () => {
   const [menuIsOpen, toggleMenu] = useState(false);
 
   return (
-    <header className="container flex flex-wrap py-6 mb-4">
+    <header className="container flex flex-wrap py-6 mb-4 border-b-2 border-white border-opacity-50">
       <div className="flex flex-col">
         <h1 className="specific-font text-3xl font-bold">
           <Link href="/">
             <a className="hover:underline">Dialogue Radio</a>
            </Link>
         </h1>
-        <p>多様なライフストーリーに出会う場所</p>
+        <p className="font-bold">多様なライフストーリーに出会う場所</p>
       </div>
       <nav className="flex-auto">
         <MenuBlock menuIsOpen={menuIsOpen} />
