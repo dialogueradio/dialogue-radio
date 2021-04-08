@@ -8,8 +8,8 @@
   .specific-font {
     font-family: 'Poetsen One', sans-serif;
   }
-  main {
-    background-image: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1617631187/wave_dqsski.svg);
+  .bg-wave {
+    background-image: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1617867132/wave_p672kt.svg);
     background-repeat: repeat-x;
     background-position-y: 330px;
     background-position-x: center;
