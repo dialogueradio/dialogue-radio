@@ -42,7 +42,7 @@ const Header = () => {
   const [menuIsOpen, toggleMenu] = useState(false);
 
   return (
-    <header className="container flex flex-wrap py-6 mb-4 border-b-2 border-white border-opacity-50">
+    <header className="container flex flex-wrap py-6 mb-10 border-b-2 border-white border-opacity-50">
       <div className="flex flex-col">
         <h1 className="specific-font text-3xl font-bold">
           <Link href="/">

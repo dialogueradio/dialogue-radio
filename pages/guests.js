@@ -1,5 +1,6 @@
 import Container from '../components/container'
 import Header from '../components/header'
+import Layout from '../components/layout'
 import { getAllGuests } from '../lib/graphcms'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -7,12 +8,13 @@ import Link from 'next/link'
 export default function Guests({ guests }) {
   return (
     <>
+      <Layout>
         <Head>
           <title>Guests</title>
         </Head>
         <Container>
           <Header />
-          <section className="grid grid-cols-1 md:grid-cols-4 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-25 mb-32">
+          <section className="grid grid-cols-4 gap-40">
           {guests.map((guest) => (
              <>
                <div>
@@ -27,6 +29,7 @@ export default function Guests({ guests }) {
           ))}
           </section>
         </Container>
+      </Layout>
     </>
   )
 }

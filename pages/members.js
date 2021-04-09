@@ -14,7 +14,7 @@ export default function Members({ members }) {
         </Head>
         <Container>
           <Header />
-          <section className="grid grid-cols-1 md:grid-cols-4 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-25 mb-32">
+          <section className="grid grid-cols-4 gap-40">
           {members.map((member) => (
              <>
                <div>
