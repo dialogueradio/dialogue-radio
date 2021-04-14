@@ -30,7 +30,7 @@ const MenuBlock = ({ menuIsOpen }) => {
 
       <button
         onClick={() => toggleSubscriberBox(true)}
-        className="px-6 py-4 bg-black hover:bg-white hover:text-black border border-black text-white font-bold"
+        className="px-5 py-4 bg-black text-white font-bold rounded-md hover:"
       >
         レターを受け取る
       </button>
@@ -49,7 +49,7 @@ const Header = () => {
             <a className="hover:underline">Dialogue Radio</a>
            </Link>
         </h1>
-        <p className="font-bold">多様なライフストーリーに出会う場所</p>
+        <p className="font-semibold">多様なライフストーリーに出会う場所</p>
       </div>
       <nav className="flex-auto">
         <MenuBlock menuIsOpen={menuIsOpen} />

@@ -1,21 +1,39 @@
 import Link from 'next/link'
 
+function resumeButton(bgValue, imgValue){
+  const bgSize = bgValue
+  const imgSize = imgValue
+  return (
+    <div className={`w-${bgSize} h-${bgSize} rounded-full flex items-center justify-center bg-accent`}>
+      <img
+        src="https://res.cloudinary.com/dialogue-radio/image/upload/v1617956066/triangle_hlz6c8.svg" 
+        className={`w-${imgSize} h-auto ml-1`}
+      />
+    </div>
+  )
+}
+
 export default function Episode({ episodes }) {
   return (
-    <div className="w-3/4">
+    <div>
       {episodes.map((episode) => (
         <Link as={`/episodes/${episode.slug}`} href="/episodes/[episode.slug]">
           <a>
-            <div className="flex justify-between p-6 mb-10 bg-white rounded-xl">
+            <div className="p-6 mb-10 bg-white rounded-xl md:flex justify-between">
               <div>
                 <p className="text-base font-bold text-gray-300">{episode.date}</p>
-                <h3 className="mt-1 mb-3 text-2xl font-bold leading-snug">{episode.title}</h3>
-                <p>{episode.description}</p>
+                <div className="flex">
+                  <div className="mr-2 md:hidden">
+                    {resumeButton(8, 3)}
+                  </div>
+                  <h3 className="text-2xl font-bold leading-snug lg:mt-1 mb-3">{episode.title}</h3>
+                </div>
+                <p className="float-left w-3/4 mr-2 md:float-none lg:w-auto">{episode.description}</p>
               </div>
               <div>
                 <div className="flex items-end">
-                  <div className="rounded-full h-14 w-14 flex items-center justify-center bg-accent mr-12 mb-2 shadow-lg">
-                    <img src="https://res.cloudinary.com/dialogue-radio/image/upload/v1617956066/triangle_hlz6c8.svg" className="ml-1" />
+                  <div className="hidden md:flex mr-12 mb-2">
+                    {resumeButton(14, 5)}
                   </div>
                   <div>
                     <img
