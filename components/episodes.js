@@ -1,19 +1,16 @@
 import Link from 'next/link'
 
-function resumeButton(bgValue, imgValue){
-  const bgSize = bgValue
-  const imgSize = imgValue
-  return (
-    <div className={`w-${bgSize} h-${bgSize} rounded-full flex items-center justify-center bg-accent`}>
-      <img
-        src="https://res.cloudinary.com/dialogue-radio/image/upload/v1617956066/triangle_hlz6c8.svg" 
-        className={`w-${imgSize} h-auto ml-1`}
-      />
-    </div>
-  )
-}
-
 export default function Episode({ episodes }) {
+  function resumeButton(bgValue, imgValue){
+    return (
+      <div className={`w-${bgValue} h-${bgValue} rounded-full flex items-center justify-center bg-accent`}>
+      <img
+      src="https://res.cloudinary.com/dialogue-radio/image/upload/v1617956066/triangle_hlz6c8.svg" 
+      className={`w-${imgValue} h-auto ml-1`}
+      />
+      </div>
+    )
+  }
   return (
     <div>
       {episodes.map((episode) => (
