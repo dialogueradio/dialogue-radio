@@ -33,4 +33,20 @@
     background-color: #FFCC15;
     border-radius: 0 50% 50% 0;
   }
+  .d-underline {
+    position: relative;
+    padding-bottom: 0.8rem;
+  }
+  .d-underline::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 14px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: #fff;
+    opacity: 50%;
+    border-radius: 0 10px 10px 0;
+  }
 }

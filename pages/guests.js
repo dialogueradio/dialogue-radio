@@ -1,6 +1,7 @@
 import Container from '../components/container'
 import Header from '../components/header'
 import Layout from '../components/layout'
+import HeroTitle from '../components/hero-title'
 import { getAllGuests } from '../lib/graphcms'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -14,6 +15,7 @@ export default function Guests({ guests }) {
         </Head>
         <Container>
           <Header />
+          <HeroTitle title="ゲスト" />
           <section className="grid grid-cols-4 gap-40">
           {guests.map((guest) => (
              <>
