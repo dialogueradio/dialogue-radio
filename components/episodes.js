@@ -1,16 +1,7 @@
 import Link from 'next/link'
+import ResumeButton from './resume-button'
 
 export default function Episode({ episodes }) {
-  function resumeButton(bgValue, imgValue){
-    return (
-      <div className={`w-${bgValue} h-${bgValue} rounded-full flex items-center justify-center bg-accent`}>
-      <img
-      src="https://res.cloudinary.com/dialogue-radio/image/upload/v1617956066/triangle_hlz6c8.svg" 
-      className={`w-${imgValue} h-auto ml-1`}
-      />
-      </div>
-    )
-  }
   return (
     <div>
       {episodes.map((episode) => (
@@ -21,7 +12,7 @@ export default function Episode({ episodes }) {
                 <p className="text-base font-bold text-gray-300">{episode.date}</p>
                 <div className="flex">
                   <div className="mr-2 md:hidden">
-                    {resumeButton(8, 3)}
+                    <ResumeButton bgValue={8} imgValue={3} />
                   </div>
                   <h3 className="text-2xl font-bold leading-snug lg:mt-1 mb-3">{episode.title}</h3>
                 </div>
@@ -30,7 +21,7 @@ export default function Episode({ episodes }) {
               <div>
                 <div className="flex items-end">
                   <div className="hidden md:flex mr-12 mb-2">
-                    {resumeButton(14, 5)}
+                    <ResumeButton bgValue={14} imgValue={5} />
                   </div>
                   <div>
                     <img

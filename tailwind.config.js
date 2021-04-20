@@ -3,10 +3,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#FFCC15',
+        'primary': '#ffcc15',
         'secondary': '#ffed4a',
-        'accent': '#A76434',
-        'danger': '#e3342f',
+        'accent': '#a76434',
+        'gray5': '#666666',
+        'gray4': '#aaaaaa',
+        'gray3': '#dddddd',
+        'gray2': '#eeeeee',
+        'gray1': '#f2f2f2'
       },
       spacing: {
         28: '7rem',

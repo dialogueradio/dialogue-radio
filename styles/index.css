@@ -17,4 +17,20 @@
     background-color: #FFCC15;
     height: 576px;
   }
+  .d-symbol {
+    position: relative;
+    padding-left: 1.3rem;
+  }
+  .d-symbol::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: #FFCC15;
+    border-radius: 0 50% 50% 0;
+  }
 }
