@@ -19,7 +19,7 @@ export default function EpisodeHeader({
             <EpisodeSubtitle>出演者</EpisodeSubtitle>
             <EpisodeHostGuest hosts={hosts} guests={guests} />
           </div>
-          <ResumeButton bgValue={14} imgValue={5} />
+          <ResumeButton />
         </div>
       </div>
       <div>

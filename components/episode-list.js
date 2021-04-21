@@ -12,7 +12,7 @@ export default function Episode({ episodes }) {
                 <p className="text-base font-bold text-gray-300">{episode.date}</p>
                 <div className="flex">
                   <div className="mr-2 md:hidden">
-                    <ResumeButton bgValue={8} imgValue={3} />
+                    <ResumeButton />
                   </div>
                   <h3 className="text-2xl font-bold leading-snug lg:mt-1 mb-3">{episode.title}</h3>
                 </div>
@@ -21,7 +21,7 @@ export default function Episode({ episodes }) {
               <div>
                 <div className="flex items-end">
                   <div className="hidden md:flex mr-12 mb-2">
-                    <ResumeButton bgValue={14} imgValue={5} />
+                    <ResumeButton />
                   </div>
                   <div>
                     <img

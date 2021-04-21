@@ -2,7 +2,7 @@ import Container from '../components/container'
 import Header from '../components/header'
 import Layout from '../components/layout'
 import HeroMessage from 'components/hero-message'
-import Episodes from '../components/episodes'
+import EpisodeList from '../components/episode-list'
 import PodcastPlatforms from '../components/podcast-platforms'
 import { getAllEpisodes } from '../lib/graphcms'
 import Head from 'next/head'
@@ -22,7 +22,7 @@ export default function Index({ episodes }) {
               <PodcastPlatforms />
             </div>
             <div className="md:w-3/4">
-              <Episodes episodes={episodes} />
+              <EpisodeList episodes={episodes} />
             </div>
           </div>
         </Container>
