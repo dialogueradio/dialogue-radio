@@ -5,9 +5,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .specific-font {
-    font-family: 'Poetsen One', sans-serif;
-  }
   .bg-wave {
     background-image: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1617867132/wave_p672kt.svg);
     background-repeat: repeat-x;

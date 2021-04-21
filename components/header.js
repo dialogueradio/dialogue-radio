@@ -15,9 +15,7 @@ const MenuBlock = ({ menuIsOpen }) => {
   return (
     <div className="flex flex-wrap w-full md:ml-auto md:w-8/12">
       <ul
-        className={`flex flex-wrap justify-around flex-grow items-center bg-darkgray-800 font-bold md:bg-transparent -mx-8 md:mx-0 px-8 md:px-0 my-4 md:my-0 w-full md:w-auto ${
-          menuIsOpen ? "" : "h-0 overflow-hidden md:overflow-auto md:h-auto"
-        }`}
+        className={`flex flex-wrap justify-around flex-grow items-center bg-darkgray-800 font-bold md:bg-transparent -mx-8 md:mx-0 px-8 md:px-0 my-4 md:my-0 w-full md:w-auto `}
       >
         {links.map(({ key, href, label }) => (
           <li key={key} className="w-full py-2 text-white md:w-auto md:py-auto">
@@ -43,14 +41,9 @@ const Header = () => {
 
   return (
     <header className="container flex flex-wrap py-6 mb-10 border-b-2 border-white border-opacity-50">
-      <div className="flex flex-col">
-        <h1 className="specific-font text-3xl font-bold">
-          <Link href="/">
-            <a className="hover:underline">Dialogue Radio</a>
-           </Link>
-        </h1>
-        <p className="font-semibold">多様なライフストーリーに出会う場所</p>
-      </div>
+      <a href="/">
+        <img src="/logo.svg" className="w-64"/>
+      </a>
       <nav className="flex-auto">
         <MenuBlock menuIsOpen={menuIsOpen} />
       </nav>
