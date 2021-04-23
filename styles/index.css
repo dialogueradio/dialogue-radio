@@ -46,4 +46,10 @@
     opacity: 50%;
     border-radius: 0 10px 10px 0;
   }
+  .tag-symbol::before {
+    content: "#";
+    color: #fff;
+    font-weight: bold;
+    margin-right: 0.4rem;
+  }
 }

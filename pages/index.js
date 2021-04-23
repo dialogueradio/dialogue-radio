@@ -1,6 +1,9 @@
 import Container from '../components/container'
 import Header from '../components/header'
 import Layout from '../components/layout'
+import Sidebar from '../components/sidebar'
+import MainContent from '../components/main-content'
+import InnerContainer from '../components/inner-container'
 import HeroMessage from 'components/hero-message'
 import EpisodeList from '../components/episode-list'
 import PodcastPlatforms from '../components/podcast-platforms'
@@ -17,14 +20,14 @@ export default function Index({ episodes }) {
         <Container>
           <Header />
           <HeroMessage />
-          <div className="md:flex">
-            <div className="md:w-1/4">
+          <InnerContainer>
+            <Sidebar>
               <PodcastPlatforms />
-            </div>
-            <div className="md:w-3/4">
+            </Sidebar>
+            <MainContent>
               <EpisodeList episodes={episodes} />
-            </div>
-          </div>
+            </MainContent>
+          </InnerContainer>
         </Container>
       </Layout>
     </>

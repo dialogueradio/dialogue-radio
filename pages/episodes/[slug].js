@@ -1,6 +1,9 @@
 import Container from 'components/container'
 import Layout from 'components/layout'
 import Header from 'components/header'
+import Sidebar from 'components/sidebar'
+import MainContent from 'components/main-content'
+import InnerContainer from 'components/inner-container'
 import PodcastPlatforms from 'components/podcast-platforms'
 import EpisodeHeader from 'components/episode-header'
 import EpisodeSubtitle from 'components/episode-subtitle'
@@ -13,11 +16,11 @@ export default function Episode({ episode }) {
     <Layout>
       <Container>
         <Header />
-        <div className="md:flex">
-          <div className="md:w-1/4">
+        <InnerContainer>
+          <Sidebar>
             <PodcastPlatforms />
-          </div>
-          <div className="md:w-3/4">
+          </Sidebar>
+          <MainContent>
             <div className="p-12 bg-white rounded-xl">
               <EpisodeHeader
                 title={episode.title}
@@ -26,13 +29,13 @@ export default function Episode({ episode }) {
                 guests={episode.guests}
                 coverImage={episode.coverImage}
               />
-              <EpisodeSubtitle>内容紹介</EpisodeSubtitle>
+              <EpisodeSubtitle title="内容紹介" />
               <EpisodeShowNotes showNotes={episode.showNotes} />
-              <EpisodeSubtitle>関連記事</EpisodeSubtitle>
+              <EpisodeSubtitle title="関連記事" />
               <EpisodeRelatedPosts relatedPosts={episode.relatedPosts} />
             </div>
-          </div>
-        </div>
+          </MainContent>
+        </InnerContainer>
       </Container>
     </Layout>
   )

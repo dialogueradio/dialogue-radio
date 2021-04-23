@@ -17,7 +17,7 @@ export default function EpisodeHeader({
         <EpisodeTitle title={title} date={date} />
         <div className="flex justify-between items-end">
           <div>
-            <EpisodeSubtitle>出演者</EpisodeSubtitle>
+            <EpisodeSubtitle title="出演者" />
             <EpisodeHostGuest hosts={hosts} guests={guests} />
           </div>
           <ResumeButton />

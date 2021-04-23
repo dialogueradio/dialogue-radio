@@ -1,6 +1,6 @@
 import PostPreview from 'components/post-preview'
 
-export default function MoreStories({ posts }) {
+export default function PostList({ posts }) {
   return (
     <section>
       <div className="grid grid-cols-3 gap-16">

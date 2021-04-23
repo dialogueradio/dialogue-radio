@@ -1,8 +1,12 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from 'components/container'
+import Sidebar from 'components/sidebar'
+import MainContent from 'components/main-content'
+import InnerContainer from 'components/inner-container'
 import PostBody from 'components/post-body'
-import MoreStories from 'components/more-stories'
+import PostList from 'components/post-list'
+import PostInfo from 'components/post-info'
 import Header from 'components/header'
 import PostHeader from 'components/post-header'
 import SectionSeparator from 'components/section-separator'
@@ -23,29 +27,36 @@ export default function Post({ post, morePosts, preview }) {
     <Layout preview={preview}>
       <Container>
         <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>
-                  {post.title}
-                </title>
-                {/* <meta property="og:image" content={post.ogImage.url} /> */}
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-            <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          </>
-        )}
+        <InnerContainer>
+          <Sidebar>
+            <PostInfo tags={post.tags} />
+          </Sidebar>
+          <MainContent>
+            {router.isFallback ? (
+              <PostTitle>Loading…</PostTitle>
+            ) : (
+              <>
+                <article className="p-12 bg-white rounded-xl">
+                  <Head>
+                    <title>
+                      {post.title}
+                    </title>
+                    {/* <meta property="og:image" content={post.ogImage.url} /> */}
+                  </Head>
+                  <PostHeader
+                    title={post.title}
+                    coverImage={post.coverImage}
+                    date={post.date}
+                    author={post.author}
+                  />
+                  <PostBody content={post.content} />
+                </article>
+              </>
+            )}
+          </MainContent>
+        </InnerContainer>
+        <SectionSeparator />
+        {morePosts.length > 0 && <PostList posts={morePosts} />}
       </Container>
     </Layout>
   )
