@@ -27,14 +27,14 @@ export default function Post({ post, morePosts, preview }) {
       <Container>
         <Header />
         <InnerContainer>
-          <Sidebar>
-            <PostInfo author={post.author} />
-          </Sidebar>
-          <MainContent>
-            {router.isFallback ? (
-              <PostTitle>Loading…</PostTitle>
-            ) : (
-              <>
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <Sidebar>
+                <PostInfo tags={post.tags} author={post.author} />
+              </Sidebar>
+              <MainContent>
                 <article className="p-12 bg-white rounded-xl">
                   <Head>
                     <title>
@@ -48,9 +48,9 @@ export default function Post({ post, morePosts, preview }) {
                   />
                   <PostBody content={post.content} />
                 </article>
-              </>
-            )}
-          </MainContent>
+              </MainContent>
+            </>
+          )}
         </InnerContainer>
         <SectionSeparator />
         {morePosts.length > 0 && <PostList posts={morePosts} />}
