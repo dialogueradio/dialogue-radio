@@ -11,10 +11,11 @@
     "date-fns": "2.10.0",
     "next": "latest",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "vercel": "^22.0.1"
   },
   "devDependencies": {
-    "postcss": "^8.2.9",
+    "postcss": "^8.2.12",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",

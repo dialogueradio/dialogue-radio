@@ -21,6 +21,7 @@ export default function Episode({ episode }) {
             <div className="p-12 bg-white rounded-xl">
               <EpisodeHeader
                 title={episode.title}
+                date={episode.date}
                 hosts={episode.hosts}
                 guests={episode.guests}
                 coverImage={episode.coverImage}

@@ -6,6 +6,7 @@ import ResumeButton from './resume-button'
 
 export default function EpisodeHeader({
     title,
+    date,
     hosts,
     guests,
     coverImage
@@ -13,7 +14,7 @@ export default function EpisodeHeader({
   return (
     <div className="flex">
       <div className="flex-grow flex flex-col justify-between mr-12">
-        <EpisodeTitle title={title} />
+        <EpisodeTitle title={title} date={date} />
         <div className="flex justify-between items-end">
           <div>
             <EpisodeSubtitle>出演者</EpisodeSubtitle>

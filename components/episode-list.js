@@ -9,7 +9,7 @@ export default function Episode({ episodes }) {
           <a>
             <div className="p-6 mb-10 bg-white rounded-xl md:flex justify-between">
               <div>
-                <p className="text-base font-bold text-gray-300">{episode.date}</p>
+                <p className="text-base font-bold text-gray3">{episode.date}</p>
                 <div className="flex">
                   <div className="mr-2 md:hidden">
                     <ResumeButton />
@@ -27,7 +27,7 @@ export default function Episode({ episodes }) {
                     <img
                       className="rounded-md"
                       src={episode.coverImage.url}
-                      alt="Picture of the author"
+                      alt="Cover image"
                       width={150}
                       height={150}
                     />
