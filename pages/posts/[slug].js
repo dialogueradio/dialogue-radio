@@ -28,7 +28,7 @@ export default function Post({ post, morePosts, preview }) {
         <Header />
         <InnerContainer>
           <Sidebar>
-            <PostInfo tags={post.tags} author={post.author} />
+            <PostInfo author={post.author} />
           </Sidebar>
           <MainContent>
             {router.isFallback ? (
