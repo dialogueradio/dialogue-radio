@@ -29,7 +29,7 @@ export default function Post({ post, morePosts, preview }) {
         <Header />
         <InnerContainer>
           <Sidebar>
-            <PostInfo tags={post.tags} />
+            <PostInfo tags={post.tags} author={post.author}/>
           </Sidebar>
           <MainContent>
             {router.isFallback ? (
@@ -41,7 +41,6 @@ export default function Post({ post, morePosts, preview }) {
                     <title>
                       {post.title}
                     </title>
-                    {/* <meta property="og:image" content={post.ogImage.url} /> */}
                   </Head>
                   <PostHeader
                     title={post.title}

@@ -1,5 +1,4 @@
 import Avatar from '../components/avatar'
-import Date from '../components/date'
 import CoverImage from './cover-image'
 import Link from 'next/link'
 
@@ -26,9 +25,7 @@ export default function PostPreview({
       </div>
       <div className="flex justify-between items-center pt-3 border-t border-gray1">
         <Avatar name={author.name} picture={author.picture.url} />
-        <div className="text-sm text-gray3">
-          <Date dateString={date} />
-        </div>
+        <p className="text-sm font-bold text-gray3">{date}</p>
       </div>
     </div>
   )
