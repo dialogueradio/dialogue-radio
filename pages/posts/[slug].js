@@ -17,7 +17,6 @@ import Head from 'next/head'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
-  console.log(post)
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -29,7 +28,7 @@ export default function Post({ post, morePosts, preview }) {
         <Header />
         <InnerContainer>
           <Sidebar>
-            <PostInfo tags={post.tags} author={post.author}/>
+            <PostInfo tags={post.tags} author={post.author} />
           </Sidebar>
           <MainContent>
             {router.isFallback ? (
