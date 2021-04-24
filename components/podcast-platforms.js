@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 const platform = [
   { href: "https://podcasts.apple.com/jp/podcast/ダイアログラジオ-dialogue-radio/id1527150714?l=en", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/apple-podcasts_uq7puz.png", label: "Apple Podcast" },
   { href: "https://open.spotify.com/show/1HXmRr01UCE3NFz5faNdiP", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/spotify_nevf2a.png", label: "Spotify" },
@@ -8,12 +10,20 @@ const platform = [
 ]
 
 export default function PodcastPlatforms() {
+
+  const [ menuIsOpen, toggleMenu ] = useState(false)
+
+  const onClick = e => {
+    e.preventDefault();
+    toggleMenu(previous => !previous);
+  };
+
   return (
     <div className="bg-white py-7 px-9 rounded-xl md:mr-9">
-      <div className="bg-primary bg-opacity-10 p-3 text-center rounded">
+      <div className="bg-primary bg-opacity-10 p-3 text-center rounded" onClick={onClick}>
         <h3 className="text-primary font-bold">購読して聞く</h3>
       </div>
-      <ul>
+      <ul className={`${ menuIsOpen ? "" : "h-0 overflow-hidden md:overflow-auto md:h-auto"}`}>
       {platform.map(({ href, src, label }) => (
           <li className="w-full py-2 text-white mt-5 md:w-auto md:py-auto">
             <a href={href} target="_blank">

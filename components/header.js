@@ -15,9 +15,9 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
       <div className="visible ml-auto md:invisible">
         <button className="w-11 h-11 relative focus:outline-none bg-black rounded-md" onClick={onClick}>
           <div class="block w-5 absolute left-1/2 top-1/2 transform  -translate-x-1/2 -translate-y-1/2">
-            <span className={`block absolute h-0.5 w-4 bg-white transform transition duration-500 ease-in-out ${ !menuIsOpen ? "" : "rotate-45 w-5"} ${menuIsOpen ? "" : "-translate-y-2"}`} />
-            <span className={`block absolute  h-0.5 w-5 bg-white transform transition duration-500 opacity-1 ease-in-out ${ !menuIsOpen ? "" : "opacity-0"}`} />
-            <span className={`block absolute h-0.5 w-4 bg-white transform transition duration-500 ease-in-out ${ !menuIsOpen ? "" : "-rotate-45 w-5"} ${menuIsOpen ? "" : "translate-y-2"}`}/>
+            <span className={`block absolute h-0.5 w-4 bg-white transform transition rounded-tr-full rounded-br-full duration-500 ease-in-out ${ menuIsOpen ? "rotate-45 w-5" : "-translate-y-2"} `} />
+            <span className={`block absolute  h-0.5 w-5 bg-white transform transition rounded-tr-full rounded-br-full duration-500 opacity-1 ease-in-out ${ menuIsOpen ? "opacity-0" : ""}`} />
+            <span className={`block absolute h-0.5 w-4 bg-white transform transition rounded-tr-full rounded-br-full duration-500 ease-in-out ${ menuIsOpen ? "-rotate-45 w-5" : "translate-y-2"} `}/>
           </div>
         </button>
       </div>
