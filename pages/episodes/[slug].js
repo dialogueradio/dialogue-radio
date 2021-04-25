@@ -21,7 +21,7 @@ export default function Episode({ episode }) {
             <PodcastPlatforms />
           </Sidebar>
           <MainContent>
-            <div className="p-12 bg-white rounded-xl">
+            <div className="py-6 px-4 md:p-12 bg-white rounded-xl">
               <EpisodeHeader
                 title={episode.title}
                 date={episode.date}

@@ -1,14 +1,14 @@
 function block(person) {
   return (
-    <div className="flex flex-col items-center mr-7">
+    <div className="flex flex-col items-center mr-3 md:mr-7">
       <img
-        className="rounded-full border-2 border-primary w-16 h-16"
+        className="rounded-full border-2 border-primary w-10 h-10 md:w-16 md:h-16"
         src={person.picture.url}
         alt="Picture of the host"
         width={70}
         height={70}
       />
-      <p className="mt-2">{person.name}</p>
+      <p className="text-xs md:text-base mt-2">{person.name}</p>
     </div>
   )
 }

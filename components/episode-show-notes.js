@@ -1,5 +1,5 @@
 export default function EpisodeHostGuest({ showNotes }) {
   return (
-    <p>{showNotes}</p>
+    <p className="text-sm md:text-base">{showNotes}</p>
   ) 
 }
