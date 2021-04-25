@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#ffcc15',
-        'secondary': '#ffed4a',
+        'secondary': '#ffde6a',
         'accent': '#a76434',
         'gray5': '#666666',
         'gray4': '#aaaaaa',
@@ -34,6 +34,7 @@ module.exports = {
       zIndex: {
         '-10': '-10',
       }
+
     },
   },
 }

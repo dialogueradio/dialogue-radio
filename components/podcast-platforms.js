@@ -19,13 +19,13 @@ export default function PodcastPlatforms() {
   };
 
   return (
-    <div className="bg-white py-7 px-9 rounded-xl md:mr-9">
-      <div className="bg-primary bg-opacity-10 p-3 text-center rounded" onClick={onClick}>
-        <h3 className="text-primary font-bold">購読して聞く</h3>
+    <div className="bg-white p-0 my-5 rounded-md md:mr-9 md:py-7 md:px-9 md:rounded-xl md:m-0">
+      <div className={`bg-secondary md:bg-primary md:bg-opacity-10 py-3 px-5 text-center md:rounded ${ menuIsOpen ? "rounded-t " : "rounded"}`} onClick={onClick}>
+        <h3 className="text-white text-left md:text-center md:text-primary font-bold">購読して聞く</h3>
       </div>
-      <ul className={`${ menuIsOpen ? "" : "h-0 overflow-hidden md:overflow-auto md:h-auto"}`}>
+      <ul className={`px-8 md:p-0 ${ menuIsOpen ? "py-3.5" : "h-0 overflow-hidden md:overflow-auto md:h-auto"}`}>
       {platform.map(({ href, src, label }) => (
-          <li className="w-full py-2 text-white mt-5 md:w-auto md:py-auto">
+          <li className="w-full py-3 md:py-2 text-white md:mt-5 md:w-auto md:py-auto">
             <a href={href} target="_blank">
               <div className="inline-flex items-center justify-center">
                 <div className="w-7 h-auto mr-4">

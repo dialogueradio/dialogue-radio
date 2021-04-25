@@ -1,4 +1,4 @@
-export default function HeroHome() {
+export default function HeroMessage() {
   return (
     <>
       <div className="hidden w-auto mx-auto mt-10 mb-12 text-center md:block w-min">
@@ -9,7 +9,7 @@ export default function HeroHome() {
 
       <div className="block text-left w-auto mx-auto md:hidden">
         <h2 className="w-auto inline-block text-primary bg-white mb-3 text-base font-bold py-2 px-2 md:w-max">ダイアログラジオとは？</h2>
-        <p className="w-auto inline-block text-primary bg-white text-xs font-bold py-0.5 px-2">ゲストと私たちパーソナリティーが、人生について多方面からカジュアルに語ることで多様な考え方、働き方、生き方の発信を目指しています</p>
+        <p className="w-auto inline-block text-primary bg-white text-sm font-bold py-0.5 px-2">ゲストと私たちパーソナリティーが、人生について多方面からカジュアルに語ることで多様な考え方、働き方、生き方の発信を目指しています</p>
       </div>
     </>
   ) 
