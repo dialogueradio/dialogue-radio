@@ -1,6 +1,8 @@
 import Container from 'components/container'
 import Layout from 'components/layout'
 import Header from 'components/header'
+import Card from 'components/card'
+import CardBody from 'components/card-body'
 import { getGuest, getAllGuestsWithSlug } from 'lib/graphcms'
 
 export default function Guest({ guest }) {
@@ -8,10 +10,14 @@ export default function Guest({ guest }) {
     <Layout>
       <Container>
         <Header />
-        <>
-        <p>{guest.name}</p>
-        <p>{guest.biography}</p>
-        </>
+        <Card>
+          <CardBody
+            picture={guest.picture}
+            name={guest.name}
+            biography={guest.biography}
+            episodes={guest.appearedOn}
+          />
+        </Card>
       </Container>
     </Layout>
   )

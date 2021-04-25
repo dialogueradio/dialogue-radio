@@ -52,4 +52,17 @@
     font-weight: bold;
     margin-right: 0.4rem;
   }
+  .title-border:before,
+  .title-border:after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #ccc;
+  }
+  .title-border:before {
+    margin-right: 1rem;
+  }
+  .title-border:after {
+    margin-left: 1rem;
+  }
 }

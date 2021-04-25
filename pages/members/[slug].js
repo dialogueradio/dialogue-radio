@@ -1,6 +1,8 @@
 import Container from 'components/container'
 import Layout from 'components/layout'
 import Header from 'components/header'
+import Card from 'components/card'
+import CardBody from 'components/card-body'
 import { getMember, getAllMembersWithSlug } from 'lib/graphcms'
 
 export default function Member({ member }) {
@@ -8,10 +10,15 @@ export default function Member({ member }) {
     <Layout>
       <Container>
         <Header />
-        <>
-        <p>{member.name}</p>
-        <p>{member.biography}</p>
-        </>
+        <Card>
+          <CardBody
+            picture={member.picture}
+            name={member.name}
+            role={member.role}
+            biography={member.biography}
+            episodes={member.hosted}
+          />
+        </Card>
       </Container>
     </Layout>
   )
