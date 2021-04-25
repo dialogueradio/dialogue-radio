@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ResumeButton from './resume-button'
+import ResumeButtonSmall from './resume-button-small'
 
 export default function Episode({ episodes }) {
   return (
@@ -7,16 +8,16 @@ export default function Episode({ episodes }) {
       {episodes.map((episode) => (
         <Link as={`/episodes/${episode.slug}`} href="/episodes/[episode.slug]">
           <a>
-            <div className="p-6 mb-10 bg-white rounded-xl md:flex justify-between">
+            <div className="p-4 md:p-6 mb-6 md:mb-10 bg-white rounded-xl md:flex justify-between">
               <div>
-                <p className="text-base font-bold text-gray3">{episode.date}</p>
-                <div className="flex">
+                <p className="text-xs md:text-base font-bold text-gray3">{episode.date}</p>
+                <div className="flex items-center mt-1 mb-3">
                   <div className="mr-2 md:hidden">
-                    <ResumeButton />
+                    <ResumeButtonSmall />
                   </div>
-                  <h3 className="text-2xl font-bold leading-snug lg:mt-1 mb-3">{episode.title}</h3>
+                  <h3 className="text-base md:text-xl font-bold leading-snug ">{episode.title}</h3>
                 </div>
-                <p className="float-left w-3/4 mr-2 md:float-none lg:w-auto">{episode.description}</p>
+                <p className="text-sm md:text-base float-left w-3/4 mr-2 md:float-none lg:w-auto">{episode.description}</p>
               </div>
               <div>
                 <div className="flex items-end">
