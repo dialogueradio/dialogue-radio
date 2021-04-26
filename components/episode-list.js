@@ -26,7 +26,7 @@ export default function Episode({ episodes }) {
                   </div>
                   <div>
                     <img
-                      className="rounded-sm md:rounded-md"
+                      className="rounded-md"
                       src={episode.coverImage.url}
                       alt="Cover image"
                       width={150}

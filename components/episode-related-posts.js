@@ -9,13 +9,13 @@ export default function EpisodeHostGuest({ relatedPosts }) {
           <div className="w-2/4">
             <CoverImage slug={relatedPost.slug} title={relatedPost.title} url={relatedPost.coverImage.url} />
           </div>
-          <div className="w-3/4 ml-7">
-            <h3 className="my-2 text-xl font-bold leading-snug">
+          <div className="w-3/4 ml-4 md:ml-7">
+            <h3 className="md:my-2 text-base md:text-xl font-bold leading-snug">
               <Link as={`/posts/${relatedPost.slug}`} href="/posts/[slug]">
                 <a className="hover:underline">{relatedPost.title}</a>
               </Link>
             </h3>
-            <p className="mb-4 text-base leading-relaxed">{relatedPost.excerpt}</p>
+            <p className="mb-4 text-sm md:text-base leading-relaxed">{relatedPost.excerpt}</p>
           </div>
         </div>
       ))}

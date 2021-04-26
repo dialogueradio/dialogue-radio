@@ -21,8 +21,8 @@ export default function EpisodeHeader({
             <EpisodeSubtitle title="出演者" />
             <EpisodeHostGuest hosts={hosts} guests={guests} />
           </div>
-          <div className="relative">
-            <EpisodeCoverImage className="md:hidden" coverImage={coverImage} />
+          <div className="relative md:hidden">
+            <EpisodeCoverImage coverImage={coverImage} />
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <ResumeButtonSmall />
             </div>
