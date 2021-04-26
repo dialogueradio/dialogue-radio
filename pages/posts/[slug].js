@@ -31,11 +31,13 @@ export default function Post({ post, morePosts, preview }) {
           ) : (
             <>
               <InnerContainer>
-                <Sidebar>
-                  <PostInfo tags={post.tags} author={post.author} />
-                </Sidebar>
+                <div className="hidden md:block">
+                  <Sidebar>
+                    <PostInfo tags={post.tags} author={post.author} />
+                  </Sidebar>
+                </div>
                 <MainContent>
-                  <article className="p-12 bg-white rounded-xl">
+                  <article className="py-6 px-5 md:p-12 bg-white rounded-xl">
                     <Head>
                       <title>
                         {post.title}

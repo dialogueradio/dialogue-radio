@@ -10,7 +10,7 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
   return (
     <div className="flex items-center w-full text-gray-300 md:w-auto">
       <a href="/">
-        <img src="/logo.svg" className="w-64"/>
+        <img src="/logo.svg" className="w-56 md:w-64"/>
       </a>
       <div className="visible ml-auto md:invisible">
         <button className="w-11 h-11 relative focus:outline-none bg-black rounded-md" onClick={onClick}>
@@ -40,7 +40,7 @@ const MenuBlock = ({ menuIsOpen }) => {
     <nav className="flex-auto">
       <div className={`flex flex-wrap w-full md:ml-auto md:w-8/12 ${ menuIsOpen ? "" : "h-0 overflow-hidden md:overflow-auto md:h-auto"}`}>
         <ul
-          className="flex flex-wrap justify-around flex-grow items-center bg-darkgray-800 font-bold md:bg-transparent -mx-8 md:mx-0 px-8 md:px-0 my-4 md:my-0 w-full md:w-auto">
+          className="flex flex-wrap justify-around flex-grow items-center bg-darkgray-800 font-bold box-border md:bg-transparent md:mx-0 px-8 md:px-0 my-4 md:my-0 w-full md:w-auto">
           {links.map(({ key, href, label }) => (
             <li key={key} className="w-full py-2 text-white md:w-auto md:py-auto">
               <Link href={href}>

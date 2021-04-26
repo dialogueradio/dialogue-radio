@@ -1,4 +1,3 @@
-import cn from 'classnames'
 import Link from 'next/link'
 
 export default function CoverImage({ title, url, slug }) {
@@ -7,7 +6,7 @@ export default function CoverImage({ title, url, slug }) {
       width={2000}
       height={1000}
       alt={`Cover Image for ${title}`}
-      className="rounded-md"
+      className="md:rounded-md"
       src={url}
     />
   )
