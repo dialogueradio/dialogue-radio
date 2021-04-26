@@ -49,12 +49,12 @@ const MenuBlock = ({ menuIsOpen }) => {
             </li>
           ))}
         </ul>
-
-        <button
-          onClick={() => toggleSubscriberBox(true)}
+        <a
+          href="https://docs.google.com/forms/d/1KOWqJpDuDug8abZf5OnC0yLepMsbhrymtK3xVDD4EDM/edit"
+          target="_blank"
           className="px-5 py-4 bg-black text-white font-bold rounded-md">
-          レターを受け取る
-        </button>
+          お便り・お問い合わせ
+        </a>
       </div>
     </nav>
   );
