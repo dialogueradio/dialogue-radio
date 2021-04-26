@@ -1,6 +1,6 @@
 export default function PostInfo({ tags, author }) {
   return (
-    <div className="sticky top-0 bg-white py-7 px-9 rounded-xl md:mr-9">
+    <div className="hidden md:block sticky top-0 bg-white py-7 px-9 rounded-xl md:mr-9">
       {/*
       <h3 className="text-black font-bold text-lg text-left py-3">目次</h3>
       <hr />
