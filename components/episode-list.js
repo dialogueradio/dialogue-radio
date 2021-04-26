@@ -17,16 +17,17 @@ export default function Episode({ episodes }) {
                   </div>
                   <h3 className="text-base md:text-2xl font-bold leading-snug ">{episode.title}</h3>
                 </div>
-                <p className="text-sm md:text-base float-left w-3/4 mr-2 md:float-none lg:w-auto">{episode.description}</p>
+                <p className="hidden md:inline text-sm md:text-base w-3/4 mr-2 lg:w-auto">{episode.description}</p>
               </div>
               <div className="md:w-2/6">
                 <div className="flex justify-end items-end">
                   <div className="hidden md:flex mr-12 mb-2">
                     <ResumeButton />
                   </div>
-                  <div>
+                  <div className="flex">
+                    <p className="md:hidden text-sm md:text-base mr-2">{episode.description}</p>
                     <img
-                      className="rounded-md"
+                      className="rounded-md w-24 h-24 md:w-40 md:h-40"
                       src={episode.coverImage.url}
                       alt="Cover image"
                       width={150}
