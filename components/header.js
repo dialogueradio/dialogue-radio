@@ -50,7 +50,7 @@ const MenuBlock = ({ menuIsOpen }) => {
           ))}
         </ul>
         <a
-          href="https://docs.google.com/forms/d/1KOWqJpDuDug8abZf5OnC0yLepMsbhrymtK3xVDD4EDM/edit"
+          href="https://forms.gle/QtJQ4iXsFish9BiD7"
           target="_blank"
           className="px-5 py-4 bg-black text-white font-bold rounded-md">
           お便り・お問い合わせ
