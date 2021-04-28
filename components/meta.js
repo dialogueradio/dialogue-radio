@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
+import { HOME_OG_IMAGE_URL } from '../lib/constants'
 
 export default function Meta() {
   return (
@@ -29,13 +29,14 @@ export default function Meta() {
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <link href="http://fonts.cdnfonts.com/css/poetsen-one" rel="stylesheet" />
+      <title>Dialogue Radio - 多様なライフストーリーに出会う場所「ダイアログラジオ」</title>
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content="多様なライフストーリーに出会う場所をお届けするポッドキャストです。"
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
