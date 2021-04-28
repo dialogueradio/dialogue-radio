@@ -4,10 +4,14 @@ import Header from 'components/header'
 import Card from 'components/card'
 import CardBody from 'components/card-body'
 import { getGuest, getAllGuestsWithSlug } from 'lib/graphcms'
+import Head from 'next/head'
 
 export default function Guest({ guest }) {
   return (
     <Layout>
+      <Head>
+        <title>{guest.name} | Dialogue Radio</title>
+      </Head>
       <Container>
         <Header />
         <Card>

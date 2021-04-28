@@ -37,9 +37,7 @@ export default function Post({ post, morePosts, preview }) {
                 <MainContent>
                   <article className="py-6 px-5 md:p-12 bg-white rounded-xl">
                     <Head>
-                      <title>
-                        {post.title}
-                      </title>
+                      <title>{post.title} | Dialogue Radio</title>
                     </Head>
                     <PostHeader
                       title={post.title}

@@ -29,7 +29,6 @@ export default function Meta() {
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <link href="http://fonts.cdnfonts.com/css/poetsen-one" rel="stylesheet" />
-      <title>Dialogue Radio - 多様なライフストーリーに出会う場所「ダイアログラジオ」</title>
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />

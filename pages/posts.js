@@ -11,7 +11,7 @@ export default function Index({ posts, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Posts</title>
+          <title>ブログ | Dialogue Radio</title>
         </Head>
         <Container>
           <Header />

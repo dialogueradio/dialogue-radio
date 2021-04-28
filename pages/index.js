@@ -15,7 +15,7 @@ export default function Index({ episodes }) {
     <>
       <Layout>
         <Head>
-          <title>Episodes</title>
+          <title>Dialogue Radio - 多様なライフストーリーに出会う場所「ダイアログラジオ」</title>
         </Head>
         <Container>
           <Header />

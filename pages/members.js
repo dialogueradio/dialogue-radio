@@ -5,14 +5,13 @@ import HeroTitle from '../components/hero-title'
 import MemberList from '../components/member-list'
 import { getAllMembers } from '../lib/graphcms'
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function Members({ members }) {
   return (
     <>
       <Layout>
         <Head>
-          <title>Members</title>
+          <title>メンバー | Dialogue Radio</title>
         </Head>
         <Container>
           <Header />

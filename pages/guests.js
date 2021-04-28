@@ -11,7 +11,7 @@ export default function Guests({ guests }) {
     <>
       <Layout>
         <Head>
-          <title>Guests</title>
+          <title>ゲスト | Dialogue Radio</title>
         </Head>
         <Container>
           <Header />

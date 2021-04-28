@@ -10,10 +10,14 @@ import EpisodeSubtitle from 'components/episode-subtitle'
 import EpisodeShowNotes from 'components/episode-show-notes'
 import EpisodeRelatedPosts from 'components/episode-related-posts'
 import { getEpisode, getAllEpisodeWithSlug } from 'lib/graphcms'
+import Head from 'next/head'
 
 export default function Episode({ episode }) {
   return (
     <Layout>
+      <Head>
+        <title>{episode.title} | Dialogue Radio</title>
+      </Head>
       <Container>
         <Header />
         <InnerContainer>
