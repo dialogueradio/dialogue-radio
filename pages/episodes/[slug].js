@@ -32,6 +32,7 @@ export default function Episode({ episode }) {
                 hosts={episode.hosts}
                 guests={episode.guests}
                 coverImage={episode.coverImage}
+                audioFile={episode.audioFile}
               />
               <EpisodeSubtitle title="内容紹介" />
               <EpisodeShowNotes showNotes={episode.showNotes} />

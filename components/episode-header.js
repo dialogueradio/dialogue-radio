@@ -10,7 +10,8 @@ export default function EpisodeHeader({
     date,
     hosts,
     guests,
-    coverImage
+    coverImage,
+    audioFile
 }) {
   return (
     <div className="md:flex">
@@ -24,12 +25,16 @@ export default function EpisodeHeader({
           <div className="relative md:hidden">
             <EpisodeCoverImage coverImage={coverImage} />
             <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <ResumeButtonSmall />
+              {/* <ResumeButtonSmall /> */}
             </div>
           </div>
           <div className="hidden md:block">
-            <ResumeButton />
+            <audio controls preload="metadata" src={audioFile.url}></audio>
+            {/*  <ResumeButton /> */}
           </div>
+        </div>
+        <div className="md:hidden">
+          <audio controls preload="metadata" src={audioFile.url}></audio>
         </div>
       </div>
       <div className="hidden md:block">
