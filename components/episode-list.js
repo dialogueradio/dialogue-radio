@@ -8,7 +8,7 @@ export default function Episode({ episodes }) {
       {episodes.map((episode) => (
         <Link as={`/episodes/${episode.slug}`} href="/episodes/[episode.slug]">
           <a>
-            <div className="py-5 pb-6 px-4 md:p-6 mb-6 md:mb-10 bg-white rounded-lg md:rounded-xl md:flex md:justify-between">
+            <div className="py-5 pb-6 px-4 md:p-6 mb-6 md:mb-10 bg-white rounded-lg md:rounded-xl md:flex md:justify-between duration-150 hover:shadow-xl">
               <div className="md:w-4/6">
                 <p className="text-xs md:text-base font-bold text-gray3">{episode.date}</p>
                 <div className="flex items-center mt-2 mb-3">

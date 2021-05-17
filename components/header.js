@@ -42,7 +42,7 @@ const MenuBlock = ({ menuIsOpen }) => {
         <ul
           className="flex flex-wrap justify-around flex-grow items-center bg-darkgray-800 font-bold box-border md:bg-transparent md:mx-0 px-8 md:px-0 my-4 md:my-0 w-full md:w-auto">
           {links.map(({ key, href, label }) => (
-            <li key={key} className="w-full py-2 text-white md:w-auto md:py-auto">
+            <li key={key} className="w-full py-2 text-white nav-underline md:w-auto md:py-auto">
               <Link href={href}>
                 <a className="text-current">{label}</a>
               </Link>
