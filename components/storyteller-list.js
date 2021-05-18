@@ -11,6 +11,7 @@ export default function MoreStories({ storytellers }) {
               <h3 className="mb-3 text-xl text-center leading-snug font-bold">
                 {storyteller.name}
               </h3>
+              <p className="text-center text-gray3 font-bold">{storyteller.occupation}</p>
             </div>
           </a>
         </Link>

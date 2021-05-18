@@ -18,6 +18,7 @@ export default function Storyteller({ storyteller }) {
           <CardBody
             picture={storyteller.picture}
             name={storyteller.name}
+            occupation={storyteller.occupation}
             biography={storyteller.biography}
             episodes={storyteller.appearedOn}
           />
