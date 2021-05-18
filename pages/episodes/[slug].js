@@ -30,7 +30,7 @@ export default function Episode({ episode }) {
                 title={episode.title}
                 date={episode.date}
                 hosts={episode.hosts}
-                guests={episode.guests}
+                guests={episode.storytellers}
                 coverImage={episode.coverImage}
                 audioFile={episode.audioFile}
               />

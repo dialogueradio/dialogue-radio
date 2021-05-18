@@ -3,23 +3,23 @@ import Layout from 'components/layout'
 import Header from 'components/header'
 import Card from 'components/card'
 import CardBody from 'components/card-body'
-import { getGuest, getAllGuestsWithSlug } from 'lib/graphcms'
+import { getStoryteller, getAllStorytellersWithSlug } from 'lib/graphcms'
 import Head from 'next/head'
 
-export default function Guest({ guest }) {
+export default function Storyteller({ storyteller }) {
   return (
     <Layout>
       <Head>
-        <title>{guest.name} | Dialogue Radio</title>
+        <title>{storyteller.name} | Dialogue Radio</title>
       </Head>
       <Container>
         <Header />
         <Card>
           <CardBody
-            picture={guest.picture}
-            name={guest.name}
-            biography={guest.biography}
-            episodes={guest.appearedOn}
+            picture={storyteller.picture}
+            name={storyteller.name}
+            biography={storyteller.biography}
+            episodes={storyteller.appearedOn}
           />
         </Card>
       </Container>
@@ -28,9 +28,9 @@ export default function Guest({ guest }) {
 }
 
 export async function getStaticPaths() {
-  const guests = await getAllGuestsWithSlug()
+  const storytellers = await getAllStorytellersWithSlug()
   return {
-    paths: guests.map(({ slug }) => ({
+    paths: storytellers.map(({ slug }) => ({
       params: { slug },
     })),
     fallback: false,
@@ -38,8 +38,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getGuest(params.slug)
+  const data = await getStoryteller(params.slug)
   return {
-    props: { guest:data.guest }
+    props: { storyteller:data.storyteller }
   }
 }

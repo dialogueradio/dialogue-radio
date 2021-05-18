@@ -30,7 +30,7 @@ const MenuBlock = ({ menuIsOpen }) => {
     { href: "/", label: "エピソード" },
     { href: "/posts", label: "ブログ" },
     { href: "/members", label: "メンバー" },
-    { href: "/guests", label: "ゲスト" },
+    { href: "/storytellers", label: "ストリーテラー" },
   ].map(link => ({
     ...link,
     key: `nav-link-${link.href}-${link.label}`
