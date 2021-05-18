@@ -40,7 +40,7 @@ const MenuBlock = ({ menuIsOpen }) => {
     <nav className="flex-auto">
       <div className={`flex flex-wrap w-full md:ml-auto md:w-8/12 ${ menuIsOpen ? "" : "h-0 overflow-hidden md:overflow-auto md:h-auto"}`}>
         <ul
-          className="flex flex-wrap justify-around flex-grow items-center bg-darkgray-800 font-bold box-border md:bg-transparent md:mx-0 px-8 md:px-0 my-4 md:my-0 w-full md:w-auto">
+          className="flex flex-wrap justify-around flex-grow items-center bg-darkgray-800 font-bold box-border md:bg-transparent md:mx-0 px-8 md:pl-0 md:pr-5 my-4 md:my-0 w-full md:w-auto">
           {links.map(({ key, href, label }) => (
             <li key={key} className="w-full py-2 text-white nav-underline md:w-auto md:py-auto">
               <Link href={href}>
