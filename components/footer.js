@@ -4,9 +4,9 @@ import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Footer() {
   return (
-    <footer className="">
+    <footer className="bg-back">
       <Container>
-        <div className="py-14 flex justify-between flex-col lg:flex-row items-center">
+        <div className="py-14 flex justify-between flex-col lg:flex-row items-center border-t border-black">
           <a
             href="https://forms.gle/QtJQ4iXsFish9BiD7"
             target="_blank"

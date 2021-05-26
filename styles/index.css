@@ -6,12 +6,12 @@
 
 @layer utilities {
   .bg-wave {
-    background-image: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1617867132/wave_p672kt.svg);
+    background-image: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1622023285/wave_p672kt_bpiryo.svg);
     background-repeat: repeat-x;
     background-position-y: 330px;
     background-position-x: center;
     background-size: 2124px 300px;
-    background-color: #FFCC15;
+    background-color: #FFC700;
     height: 576px;
   }
   .d-symbol {

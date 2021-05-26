@@ -7,7 +7,6 @@ export default function SnsButton({variant}) {
   
   const iconfStyle = variant ? "text-primary w-2.5 group-hover:text-white" :  "text-black w-2.5 group-hover:text-primary"
   const iconiStyle = variant ? "text-primary w-5 group-hover:text-white" : "text-black w-5 group-hover:text-primary"
-  const bgStyle = "group flex justify-center items-center w-12 h-12 bg-white bg-opacity-40 rounded-full mr-5 border-2 duration-100 border-transparent hover:border-white"
   
   const facebook =  <FontAwesomeIcon icon={faFacebookF} className={iconfStyle}/>
   const instagram =  <FontAwesomeIcon icon={faInstagram} className={iconiStyle}/>
@@ -19,7 +18,7 @@ export default function SnsButton({variant}) {
     <div className="flex items-center justify-center">
       {links.map(({ href, element }) => (
         <a href={href} target="_blank">
-          <span className={bgStyle}>
+          <span className={`group flex justify-center items-center w-12 h-12 rounded-full mr-6 border-2 duration-100 border-transparent ${ variant ? "bg-white bg-opacity-40  hover:border-white" : "border-black hover:border-primary"}`}>
             {element}
           </span>
         </a>
