@@ -10,7 +10,7 @@ export default function Footer() {
           <a
             href="https://forms.gle/QtJQ4iXsFish9BiD7"
             target="_blank"
-            className="px-5 py-4 bg-black text-white font-bold rounded-md">
+            className="px-5 py-4 bg-black text-white font-bold rounded-md mb-8 md:mb-0">
             お便り・お問い合わせ
           </a>
           <SnsButton />
