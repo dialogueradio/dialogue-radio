@@ -15,7 +15,7 @@ export default function SnsButton({variant}) {
     { href: "https://www.instagram.com/dialogue_radio/", element: instagram},
   ]
   return (
-    <div className="flex items-center justify-between w-28 mr-0 md:mr-6">
+    <div className="flex items-center justify-between w-28 md:mr-6">
       {links.map(({ href, element }) => (
         <a href={href} target="_blank">
           <span className={`group flex justify-center items-center w-12 h-12 rounded-full border-2 duration-100 border-transparent ${ variant ? "bg-white bg-opacity-40  hover:border-white" : "border-black hover:border-primary"}`}>
