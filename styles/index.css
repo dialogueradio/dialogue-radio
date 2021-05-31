@@ -86,30 +86,51 @@
   .nav-underline:hover::after {
     transform: scale(1, 1);
   }
-  .badge-layout {
-    position: absolute;
-    top: -13px;
-    right: -13px;
-  }
-  .badge-base {
-    position: relative;
-    width: 65px;
-    height: 65px;
-  }
-  .badge-bg {
-    position: absolute;
-    background: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1622029689/badge_smrpzk.svg) no-repeat;
-    background-size: auto 65px;
-    width: 65px;
-    height: 65px;
-    animation: rotate-anime 8s linear infinite;
-  }
-  .badge-label {
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+  @variants responsive {
+    .badge-layout {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+    }
+    .badge-layout-lg {
+      position: absolute;
+      top: -13px;
+      right: -13px;
+    }
+    .badge-base {
+      position: relative;
+      width: 50px;
+      height: 50px;
+    }
+    .badge-base-lg {
+      position: relative;
+      width: 65px;
+      height: 65px;
+    }
+    .bage-src {
+      background: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1622029689/badge_smrpzk.svg) no-repeat;
+    }
+    .badge-bg {
+      position: absolute;
+      background-size: auto 50px;
+      width: 50px;
+      height: 50px;
+      animation: rotate-anime 8s linear infinite;
+    }
+    .badge-bg-lg {
+      position: absolute;
+      background-size: auto 65px;
+      width: 65px;
+      height: 65px;
+      animation: rotate-anime 8s linear infinite;
+    }
+    .badge-label {
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
   }
   @keyframes rotate-anime {
     0%  {transform: rotate(0);}

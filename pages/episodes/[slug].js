@@ -29,6 +29,7 @@ export default function Episode({ episode }) {
               <EpisodeHeader
                 title={episode.title}
                 date={episode.date}
+                audioDuration={episode.audioDuration}
                 hosts={episode.hosts}
                 guests={episode.storytellers}
                 coverImage={episode.coverImage}

@@ -5,7 +5,7 @@ import Sidebar from '../components/sidebar'
 import MainContent from '../components/main-content'
 import InnerContainer from '../components/inner-container'
 import HeroMessage from 'components/hero-message'
-import EpisodeList from '../components/episode-list'
+import Episodes from '../components/episodes'
 import PodcastPlatforms from '../components/podcast-platforms'
 import { getAllEpisodes } from '../lib/graphcms'
 import Head from 'next/head'
@@ -25,7 +25,7 @@ export default function Index({ episodes }) {
               <PodcastPlatforms />
             </Sidebar>
             <MainContent>
-              <EpisodeList episodes={episodes} />
+              <Episodes episodes={episodes} />
             </MainContent>
           </InnerContainer>
         </Container>

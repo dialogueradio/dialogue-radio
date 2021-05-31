@@ -2,12 +2,14 @@ import EpisodeTitle from './episode-title'
 import EpisodeSubtitle from './episode-subtitle'
 import EpisodeHostGuest from './episode-host-guest'
 import EpisodeCoverImage from './episode-cover-image'
+import DateDuration from './date-duration'
 import ResumeButton from './resume-button'
 import ResumeButtonSmall from './resume-button-small'
 
 export default function EpisodeHeader({
     title,
     date,
+    audioDuration,
     hosts,
     guests,
     coverImage,
@@ -16,10 +18,13 @@ export default function EpisodeHeader({
   return (
     <div className="md:flex">
       <div className="flex-grow flex flex-col justify-between md:mr-12">
-        <EpisodeTitle title={title} date={date} />
+        <div>
+          <EpisodeTitle title={title} />
+          <DateDuration date={date} audioDuration={audioDuration} />
+        </div>
         <div className="flex justify-between items-end">
           <div>
-            <EpisodeSubtitle title="出演者" />
+            <EpisodeSubtitle firstOne={true} title="出演者" />
             <EpisodeHostGuest hosts={hosts} guests={guests} />
           </div>
           <div className="relative md:hidden">
