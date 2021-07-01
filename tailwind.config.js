@@ -14,7 +14,7 @@ module.exports = {
         'gray1': '#f2f2f2'
       },
       spacing: {
-        28: '7rem',
+        '30': '7.5rem',
       },
       letterSpacing: {
         tighter: '-.04em',
@@ -34,8 +34,10 @@ module.exports = {
       },
       zIndex: {
         '-10': '-10',
+      },
+      borderWidth: {
+        '2.5': '2.5px'
       }
-
     },
   },
 }
