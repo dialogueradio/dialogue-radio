@@ -60,8 +60,6 @@ const MenuBlock = ({ menuIsOpen }) => {
   );
 };
 
-// const MenuFull = {}
-
 const Header = () => {
   const [menuIsOpen, toggleMenu] = useState(false);
 

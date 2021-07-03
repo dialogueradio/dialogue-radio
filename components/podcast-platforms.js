@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 
-const platform = [
+const platforms = [
   { href: "https://podcasts.apple.com/jp/podcast/ダイアログラジオ-dialogue-radio/id1527150714?l=en", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/apple-podcasts_uq7puz.png", label: "Apple Podcast" },
   { href: "https://open.spotify.com/show/1HXmRr01UCE3NFz5faNdiP", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/spotify_nevf2a.png", label: "Spotify" },
   { href: "https://stand.fm/channels/5ed5258a354d77a05016ae9a", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/stand-fm_sg6jjk.png", label: "stand.fm" },
   { href: "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zMDc3NTYyMC9wb2RjYXN0L3Jzcw==", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/google-podcasts_bdjuud.png", label: "Google Podcasts" },
   { href: "https://pca.st/2hrg9jti", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/pocketcasts_pntxu4.png", label: "Pocket Cast" },
   { href: "https://anchor.fm/s/30775620/podcast/rss", src: "https://res.cloudinary.com/dialogue-radio/image/upload/v1617787619/icon/rss_x7j0t3.png", label: "RSS" },
-]
+].map(platform => ({
+    ...platform,
+    key: `platform-${platform.href}-${platform.label}`
+  }));
 
 export default function PodcastPlatforms() {
 
@@ -24,8 +27,8 @@ export default function PodcastPlatforms() {
         <h3 className="font-bold text-left text-white xl:text-center xl:text-primary">購読して聞く</h3>
       </div>
       <ul className={`px-8 xl:p-0 ${ menuIsOpen ? "py-3.5" : "h-0 overflow-hidden xl:overflow-auto xl:h-auto"}`}>
-      {platform.map(({ href, src, label }) => (
-          <li className="w-full py-3 text-white xl:py-2 xl:mt-5 xl:w-auto xl:py-auto">
+      {platforms.map(({ href, src, label, key }) => (
+          <li key={key} className="w-full py-3 text-white xl:py-2 xl:mt-5 xl:w-auto xl:py-auto">
             <a href={href} target="_blank">
               <div className="inline-flex items-center justify-center">
                 <div className="h-auto mr-4 w-7">
