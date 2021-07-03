@@ -19,19 +19,19 @@ export default function PodcastPlatforms() {
   };
 
   return (
-    <div className="bg-white p-0 my-5 rounded-md md:mr-9 md:py-7 md:px-9 md:rounded-xl md:m-0">
-      <div className={`bg-secondary md:bg-primary md:bg-opacity-10 py-3 px-5 text-center md:rounded ${ menuIsOpen ? "rounded-t " : "rounded"}`} onClick={onClick}>
-        <h3 className="text-white text-left md:text-center md:text-primary font-bold">購読して聞く</h3>
+    <div className="p-0 mt-5 mb-6 bg-white md:mb-9 rounded-xl xl:mr-9 xl:py-7 xl:px-9 xl:rounded-xl xl:m-0">
+      <div className={`bg-secondary xl:bg-primary xl:bg-opacity-10 py-3 px-5 text-center xl:rounded ${ menuIsOpen ? "rounded-t " : "rounded"}`} onClick={onClick}>
+        <h3 className="font-bold text-left text-white xl:text-center xl:text-primary">購読して聞く</h3>
       </div>
-      <ul className={`px-8 md:p-0 ${ menuIsOpen ? "py-3.5" : "h-0 overflow-hidden md:overflow-auto md:h-auto"}`}>
+      <ul className={`px-8 xl:p-0 ${ menuIsOpen ? "py-3.5" : "h-0 overflow-hidden xl:overflow-auto xl:h-auto"}`}>
       {platform.map(({ href, src, label }) => (
-          <li className="w-full py-3 md:py-2 text-white md:mt-5 md:w-auto md:py-auto">
+          <li className="w-full py-3 text-white xl:py-2 xl:mt-5 xl:w-auto xl:py-auto">
             <a href={href} target="_blank">
               <div className="inline-flex items-center justify-center">
-                <div className="w-7 h-auto mr-4">
+                <div className="h-auto mr-4 w-7">
                   <img className="" src={src}></img>
                 </div>
-                <span className="text-gray-600 text-sm font-bold">{label}</span>
+                <span className="text-sm font-bold text-gray-600">{label}</span>
               </div>
             </a>
           </li>

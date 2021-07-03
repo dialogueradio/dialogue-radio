@@ -10,7 +10,7 @@ export default function EpisodeHostGuest({ relatedPosts }) {
             <CoverImage slug={relatedPost.slug} title={relatedPost.title} url={relatedPost.coverImage.url} />
           </div>
           <div className="mt-3 md:w-3/4 md:ml-4 md:ml-7 md:mt-1">
-            <h3 className="text-base font-bold leading-snug md:mb-2 md:text-xl">
+            <h3 className="mb-2 text-base font-bold leading-snug md:text-xl">
               <Link as={`/posts/${relatedPost.slug}`} href="/posts/[slug]">
                 <a className="hover:underline">{relatedPost.title}</a>
               </Link>

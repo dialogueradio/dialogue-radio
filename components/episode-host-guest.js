@@ -2,7 +2,7 @@ function block(person) {
   return (
     <div className="flex flex-col items-center mr-3 md:mr-7">
       <img
-        className="rounded-full border-2 border-primary w-11 h-11 md:w-16 md:h-16"
+        className="h-auto border-2 rounded-full border-primary w-11 md:w-16 md:h-auto"
         src={person.picture.url}
         alt="Picture of the host"
         width={70}

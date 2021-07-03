@@ -6,11 +6,11 @@ export default function Footer() {
   return (
     <footer className="bg-back">
       <Container>
-        <div className="py-14 flex justify-between flex-col lg:flex-row items-center border-t border-black">
+        <div className="flex flex-col items-center justify-between border-t border-black py-14 sm:flex-row">
           <a
             href="https://forms.gle/QtJQ4iXsFish9BiD7"
             target="_blank"
-            className="px-5 py-4 bg-black text-white font-bold rounded-md mb-8 md:mb-0">
+            className="px-5 py-4 mb-8 font-bold text-white bg-black rounded-md md:mb-0">
             お便り・お問い合わせ
           </a>
           <SnsButton />

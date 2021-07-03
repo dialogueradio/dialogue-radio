@@ -8,11 +8,11 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
   };
 
   return (
-    <div className="flex items-center w-full text-gray-300 md:w-auto">
+    <div className="flex items-center w-full text-gray-300 lg:w-auto">
       <a href="/">
-        <img src={`${ menuIsOpen ? "/logo-white.svg" : "/logo.svg"}`} className="w-56 md:w-64"/>
+        <img src={`${ menuIsOpen ? "/logo-white.svg" : "/logo.svg"}`} className="w-56 lg:w-64"/>
       </a>
-      <div className="visible ml-auto md:invisible">
+      <div className="visible ml-auto lg:invisible">
         <button className={`relative w-11 h-11 focus:outline-none rounded-md ${ menuIsOpen ? "bg-white" : "bg-black"}`} onClick={onClick}>
           <div className="absolute block w-5 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <span className={`block absolute h-0.5 w-4 transform transition rounded-tr-full rounded-br-full duration-500 ease-in-out ${ menuIsOpen ? "rotate-45 w-5 bg-black" : "-translate-y-2 bg-white" } `} />
@@ -38,11 +38,11 @@ const MenuBlock = ({ menuIsOpen }) => {
 
   return (
     <nav className="flex-auto">
-      <div className={`flex flex-wrap w-full md:ml-auto md:w-10/12 ${ menuIsOpen ? "absolute pt-10" : "h-0 overflow-hidden md:overflow-auto md:h-auto"}`}>
+      <div className={`flex flex-wrap w-full lg:ml-auto lg:w-11/12 ${ menuIsOpen ? "absolute pt-10" : "h-0 overflow-hidden lg:overflow-auto lg:h-auto"}`}>
         <ul
-          className="flex flex-wrap items-center justify-around flex-grow w-full px-8 my-4 font-bold bg-darkgray-800 box-border md:bg-transparent md:mx-0 md:pl-0 md:pr-5 md:my-0 md:w-auto">
+          className="flex flex-wrap items-center justify-around flex-grow w-full px-8 my-4 font-bold bg-darkgray-800 box-border lg:bg-transparent lg:mx-0 lg:pl-0 lg:pr-5 lg:my-0 lg:w-auto">
           {links.map(({ key, href, label }) => (
-            <li key={key} className={`w-full text-white md:w-auto md:py-auto ${ menuIsOpen ? "text-xl py-4" : "nav-underline py-2"}`} >
+            <li key={key} className={`w-full text-white lg:w-auto lg:py-auto ${ menuIsOpen ? "text-xl py-4" : "nav-underline py-2"}`} >
               <Link href={href}>
                 <a className="text-current">{label}</a>
               </Link>
