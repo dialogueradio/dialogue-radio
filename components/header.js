@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import Link from 'next/link'
+import SnsButton from 'components/sns-button'
 
 const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
   const onClick = e => {
@@ -37,8 +38,8 @@ const MenuBlock = ({ menuIsOpen }) => {
   }));
 
   return (
-    <nav className="flex-auto">
-      <div className={`flex flex-wrap w-full lg:ml-auto lg:w-11/12 ${ menuIsOpen ? "absolute pt-10" : "h-0 overflow-hidden lg:overflow-auto lg:h-auto"}`}>
+    <nav className={`flex-auto ${ menuIsOpen ? "fixed mt-20" : "h-0 overflow-hidden lg:overflow-auto lg:h-auto"}`}>
+      <div className={`flex flex-wrap w-full lg:ml-auto lg:w-11/12 ${ menuIsOpen ? "flex-col" : ""}`}>
         <ul
           className="flex flex-wrap items-center justify-around flex-grow w-full px-8 my-4 font-bold bg-darkgray-800 box-border lg:bg-transparent lg:mx-0 lg:pl-0 lg:pr-5 lg:my-0 lg:w-auto">
           {links.map(({ key, href, label }) => (
@@ -52,9 +53,14 @@ const MenuBlock = ({ menuIsOpen }) => {
         <a
           href="https://forms.gle/QtJQ4iXsFish9BiD7"
           target="_blank"
-          className={`font-bold text-white rounded-md ${ menuIsOpen ? "px-8 pt-8 text-gray4" : "px-5 bg-black py-4 "}`}>
+          className={`font-bold text-white rounded-md ${ menuIsOpen ? "px-8 pt-4 text-gray4" : "px-5 bg-black py-4 "}`}>
           お便り・お問い合わせ
         </a>
+        { menuIsOpen ? (
+          <div className="px-8 pt-14">
+            <SnsButton variant={"WHITE"} />
+          </div>
+        ) : ("") }
       </div>
     </nav>
   );
@@ -65,7 +71,9 @@ const Header = () => {
 
   return (
     <>
-      <div className={`${ menuIsOpen ? "absolute top-0 bottom-0 left-0 right-0 z-40 bg-black opacity-90" : ""}`}></div>
+      { menuIsOpen ? (
+        <div className="fixed top-0 bottom-0 left-0 right-0 z-40 bg-black opacity-90"></div>
+      ) : ""}
       <header className="container relative z-50 flex flex-wrap py-6 mb-10 border-b-2 border-white border-opacity-50">
         <LogoBlock toggleMenu={toggleMenu} menuIsOpen={menuIsOpen} />
         <MenuBlock menuIsOpen={menuIsOpen} />

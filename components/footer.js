@@ -13,7 +13,7 @@ export default function Footer() {
             className="px-5 py-4 mb-8 font-bold text-white bg-black rounded-md md:mb-0">
             お便り・お問い合わせ
           </a>
-          <SnsButton />
+          <SnsButton variant={"BLACK"} />
         </div>
       </Container>
     </footer>

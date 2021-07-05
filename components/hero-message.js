@@ -11,7 +11,7 @@ export default function HeroMessage() {
           </div>
         </div>
         <div className="absolute bottom-0 right-0 hidden xl:flex">
-          <SnsButton variant={"hero"} />
+          <SnsButton variant={"FILL"} />
         </div>
       </div>
     </>
