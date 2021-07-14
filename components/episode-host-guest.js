@@ -8,7 +8,7 @@ function block(person) {
         width={70}
         height={70}
       />
-      <p className="text-xs md:text-base mt-2">{person.name}</p>
+      <p className="mt-2 text-xs md:text-base">{person.name}</p>
     </div>
   )
 }

@@ -39,7 +39,7 @@ const MenuBlock = ({ menuIsOpen }) => {
 
   return (
     <nav className={`flex-auto ${ menuIsOpen ? "fixed mt-20" : "h-0 overflow-hidden lg:overflow-auto lg:h-auto"}`}>
-      <div className={`flex flex-wrap w-full lg:ml-auto lg:w-11/12 ${ menuIsOpen ? "flex-col" : ""}`}>
+      <div className={`flex flex-wrap w-full lg:ml-auto xl:w-9/12 lg:w-11/12 ${ menuIsOpen ? "flex-col" : ""}`}>
         <ul
           className="flex flex-wrap items-center justify-around flex-grow w-full px-8 my-4 font-bold bg-darkgray-800 box-border lg:bg-transparent lg:mx-0 lg:pl-0 lg:pr-5 lg:my-0 lg:w-auto">
           {links.map(({ key, href, label }) => (

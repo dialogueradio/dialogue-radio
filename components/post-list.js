@@ -12,7 +12,6 @@ export default function PostList({ posts }) {
             date={post.date}
             author={post.author}
             slug={post.slug}
-            excerpt={post.excerpt}
           />
         ))}
       </div>
