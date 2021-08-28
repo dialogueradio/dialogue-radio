@@ -26,7 +26,7 @@ export default function SnsButton({variant}) {
     key: `sns-link-${link.href}-${link.element}`
       }));
   return (
-    <div className="flex items-center justify-between w-30 md:mr-6">
+    <div className="flex items-center justify-between order-1 w-30 md:mr-6 sm:order-2">
       {links.map(({ href, element, key }) => (
         <a key={key} href={href} target="_blank">
           <span className={classNames('group flex justify-center items-center w-12 h-12 rounded-full border-2.5 duration-100 border-transparent', FOCUS_MAPS[variant])}>
