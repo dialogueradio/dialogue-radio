@@ -9,7 +9,7 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
   };
 
   return (
-    <div className="flex items-center w-full text-gray-300 lg:w-auto">
+    <div className={`flex items-center text-gray-300 lg:w-auto ${ menuIsOpen ? "fixed top-0 left-0 right-0 py-6 mx-5 w-auto border-b-2 border-white border-opacity-50" : "w-full"}`}>
       <a href="/">
         <img src={`${ menuIsOpen ? "/logo-white.svg" : "/logo.svg"}`} className="w-56 lg:w-64"/>
       </a>
@@ -74,7 +74,7 @@ const Header = () => {
       { menuIsOpen ? (
         <div className="fixed top-0 bottom-0 left-0 right-0 z-40 bg-black opacity-90"></div>
       ) : ""}
-      <header className="container relative z-50 flex flex-wrap py-6 mb-10 border-b-2 border-white border-opacity-50">
+      <header className={`container relative z-50 flex flex-wrap py-6 mb-10 ${ menuIsOpen ? "border-none header-keep" : "border-b-2 border-white border-opacity-50 "}`}>
         <LogoBlock toggleMenu={toggleMenu} menuIsOpen={menuIsOpen} />
         <MenuBlock menuIsOpen={menuIsOpen} />
       </header>
