@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dialogue.radio
+
+# Sitemaps
+Sitemap: https://dialogue.radio/sitemap.xml
