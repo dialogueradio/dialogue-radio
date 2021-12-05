@@ -11,10 +11,10 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
   return (
     <div className={`flex items-center text-gray-300 lg:w-auto ${ menuIsOpen ? "fixed top-0 left-0 right-0 py-6 mx-5 w-auto border-b-2 border-white border-opacity-50" : "w-full"}`}>
       <a href="/">
-        <img src={`${ menuIsOpen ? "/logo-white.svg" : "/logo.svg"}`} className="w-56 lg:w-64"/>
+        <img src={`${ menuIsOpen ? "/logo-white.svg" : "/logo.svg"}`} className="w-56 lg:w-64" alt="ダイアログラジオ"/>
       </a>
       <div className="visible ml-auto lg:invisible">
-        <button className={`relative w-11 h-11 focus:outline-none rounded-md ${ menuIsOpen ? "bg-white" : "bg-black"}`} onClick={onClick}>
+        <button className={`relative w-11 h-11 focus:outline-none rounded-md ${ menuIsOpen ? "bg-white" : "bg-black"}`} onClick={onClick} aria-label="メニューの開閉">
           <div className="absolute block w-5 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <span className={`block absolute h-0.5 w-4 transform transition rounded-tr-full rounded-br-full duration-500 ease-in-out ${ menuIsOpen ? "rotate-45 w-5 bg-black" : "-translate-y-2 bg-white" } `} />
             <span className={`block absolute  h-0.5 w-5 transform transition rounded-tr-full rounded-br-full duration-500 opacity-1 ease-in-out ${ menuIsOpen ? "opacity-0 bg-black" : "bg-white"}`} />

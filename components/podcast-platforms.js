@@ -32,7 +32,7 @@ export default function PodcastPlatforms() {
             <a href={href} target="_blank">
               <div className="inline-flex items-center justify-center">
                 <div className="h-auto mr-4 w-7">
-                  <img className="" src={src}></img>
+                  <img className="" src={src} alt={label}></img>
                 </div>
                 <span className="text-sm font-bold text-gray-600">{label}</span>
               </div>
