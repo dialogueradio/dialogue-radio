@@ -1,20 +1,16 @@
-import Link from 'next/link'
+import MemberPreview from 'components/member-preview'
 
-export default function MoreStories({ members }) {
+export default function MemberList({ members }) {
   return (
-    <section className="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-4">
+    <section className="grid grid-cols-2 gap-x-4 gap-y-5 md:gap-8 lg:grid-cols-5">
       {members.map((member) => (
-        <Link as={`/members/${member.slug}`} href="/members/[member.slug]">
-        <a>
-          <div className="bg-white rounded-xl p-8 pb-9 duration-150 hover:shadow-xl">
-            <img src={member.picture.url} className="w-28 h-28 mb-5 mx-auto border-4 border-primary rounded-full" alt={member.name} />
-            <h3 className="mb-3 text-xl text-center leading-snug font-bold">
-              {member.name}
-            </h3>
-            <p className="text-center text-gray3 font-bold">{member.role}</p>
-          </div>
-        </a>
-        </Link>
+        <MemberPreview
+          key={member.slug}
+          name={member.name}
+          picture={member.picture}
+          role={member.role}
+          slug={member.slug}
+        />
       ))}
     </section>
   )

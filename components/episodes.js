@@ -7,7 +7,7 @@ export default function Episode({ episodes }) {
   return (
     <div>
       {episodes.map((episode) => (
-        <Link key={episode.slug} as={`/episodes/${episode.slug}`} href="/episodes/[episode.slug]">
+        <Link key={episode.slug} as={`/episodes/${episode.slug}`} href={`/episodes/${episode.slug}`}>
           <a>
             <div className="relative px-4 py-5 pb-6 mb-6 bg-white rounded-lg md:p-6 md:mb-10 md:rounded-xl md:flex md:justify-between duration-150 hover:shadow-xl">
               {episodes.length == episode.episodeNumber ? (

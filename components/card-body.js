@@ -19,7 +19,7 @@ export default function CardBody({
         <ul className="inline-block">
           {episodes.map((episode) => (
             <li key={episode.slug} className="text-left font-bold py-1.5">
-              <Link as={`/episodes/${episode.slug}`} href="/episodes/[slug]">
+              <Link as={`/episodes/${episode.slug}`} href={`/episodes/${episode.slug}`}>
                 <a className="hover:underline">{episode.title}</a>
               </Link>
             </li>

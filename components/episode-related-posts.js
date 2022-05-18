@@ -5,7 +5,7 @@ export default function EpisodeHostGuest({ relatedPosts }) {
   return (
     <div>
       {relatedPosts.map((relatedPost) => (
-        <div className="md:flex">
+        <div className="md:flex" key={relatedPost.title}>
           <div className="md:w-2/4">
             <CoverImage slug={relatedPost.slug} title={relatedPost.title} url={relatedPost.coverImage.url} />
           </div>
