@@ -22,9 +22,7 @@ const Episode = ({ currentEpisode }) => {
   } = useContext(PlayerContext);
 
   useEffect(() => {
-    if (!episode) {
-      dispatch({ type: "setEpisode", payload: currentEpisode });
-    }
+    dispatch({ type: "setEpisode", payload: currentEpisode });
   }, []);
   
   return currentEpisode ? (
