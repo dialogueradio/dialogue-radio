@@ -2,8 +2,6 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPlayCircle,
-  faPauseCircle,
   faChevronLeft,
   faChevronRight
 } from "@fortawesome/free-solid-svg-icons";
@@ -83,8 +81,22 @@ const AudioPlayer = () => {
     }
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+  if (typeof window !== 'undefined') {
+    const handleResize = () => {
+      if (window.innerWidth < 720) {
+        setIsMobile(true)
+      } else {
+        setIsMobile(false)
+      }
+    }
+    useEffect(() => {
+      window.addEventListener("resize", handleResize)
+    })
+  }
+  
   return (
-    <Draggable positionOffset={{ x: "-50%", y: 0 }}>
+    <Draggable positionOffset={{ x: "-50%", y: 0 }} disabled={isMobile}>
       <div
         className={`fixed bottom-0 left-1/2 ${
           playerOpen ? "w-full md:w-1/3" : "w-full md:w-auto"
@@ -123,7 +135,7 @@ const AudioPlayer = () => {
               <div className="relative flex items-center w-full h-1 my-2 bg-white rounded-full main-gradient">
                 {trackLoaded ? (
                   <span
-                    className='absolute w-2.5 h-2.5 border-2 border-white bg-black rounded-full'
+                    className='absolute w-2.5 h-2.5 border-2 border-white bg-gray5 rounded-full'
                     style={{
                       left: `${(currentTime / seconds(episode.audioDuration)) * 100}%`
                     }}
