@@ -16,7 +16,7 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
         </a>
       </Link>
       <div className="visible ml-auto lg:invisible">
-        <button className={`relative w-11 h-11 focus:outline-none rounded-md ${ menuIsOpen ? "bg-white" : "bg-black"}`} onClick={onClick} aria-label="メニューの開閉">
+        <button className={`relative w-11 h-11 focus:outline-none rounded-md bg-light-blue`} onClick={onClick} aria-label="メニューの開閉">
           <div className="absolute block w-5 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <span className={`block absolute h-0.5 w-4 transform transition rounded-tr-full rounded-br-full duration-500 ease-in-out ${ menuIsOpen ? "rotate-45 w-5 bg-black" : "-translate-y-2 bg-white" } `} />
             <span className={`block absolute  h-0.5 w-5 transform transition rounded-tr-full rounded-br-full duration-500 opacity-1 ease-in-out ${ menuIsOpen ? "opacity-0 bg-black" : "bg-white"}`} />
@@ -55,7 +55,7 @@ const MenuBlock = ({ menuIsOpen }) => {
         <a
           href="https://forms.gle/QtJQ4iXsFish9BiD7"
           target="_blank"
-          className={`font-bold text-white rounded-md ${ menuIsOpen ? "px-8 pt-4 text-gray4" : "px-5 bg-black py-4 "}`}>
+          className={`font-bold text-white rounded-md ${ menuIsOpen ? "px-8 pt-4 text-gray4" : "px-5 bg-light-blue py-4 "}`}>
           お便り・お問い合わせ
         </a>
         { menuIsOpen ? (

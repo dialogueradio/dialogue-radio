@@ -6,8 +6,10 @@ module.exports = {
         'primary': '#FFC700',
         'secondary': '#ffde6a',
         'accent': '#2A2A2A',
+        'beige': '#F8D0A8',
+        'light-blue': '#A1D3FF',
         'back': '#FFF8E0',
-        'gray5': '#666666',
+        'gray5': '#424242',
         'gray4': '#aaaaaa',
         'gray3': '#dddddd',
         'gray2': '#eeeeee',
@@ -37,6 +39,15 @@ module.exports = {
       },
       borderWidth: {
         '2.5': '2.5px'
+      },
+      animation: {
+        'flow': 'flow 20s linear infinite',
+      },
+      keyframes: {
+        flow: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       }
     },
   },

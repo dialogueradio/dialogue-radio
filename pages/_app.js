@@ -1,5 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useReducer } from 'react'
+import App from 'next/app'
 import { useRouter } from 'next/router'
+import { PlayerProvider, initialState, reducer } from "../context/AudioPlayer";
+import AudioPlayer from "../components/audio-player";
 
 import '../styles/index.css'
 import * as gtag from '../lib/gtag'
@@ -20,8 +23,15 @@ function MyApp({ Component, pageProps }) {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+  
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  return <Component {...pageProps} />
+  return (
+    <PlayerProvider value={{ state, dispatch }}>
+      <Component {...pageProps} />
+      <AudioPlayer />
+    </PlayerProvider>
+  )
 }
 
 export default MyApp

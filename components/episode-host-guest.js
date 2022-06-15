@@ -1,8 +1,8 @@
 function block(person) {
   return (
-    <div className="flex flex-col items-center mr-3 md:mr-7">
+    <div className="flex flex-col items-center mr-3 md:mr-7" key={person.name}>
       <img
-        className="h-11 border-2 rounded-full border-primary w-11 md:w-16 md:h-16"
+        className="rounded-full h-11 w-11 md:w-16 md:h-16"
         src={person.picture.url}
         alt="Picture of the host"
         width={70}

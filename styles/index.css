@@ -139,6 +139,14 @@
     0%  {transform: rotate(0);}
     100%  {transform: rotate(360deg);}
   }
+  .player-title {
+    display: inline-block;
+    animation : flow-anime 20s linear infinite;
+  }
+  @keyframes flow-anime {
+    0% { transform: translateX(0)}
+    100% { transform: translateX(-100%)}
+  }
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
   blockquote {
     margin:50px auto;
