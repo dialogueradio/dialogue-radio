@@ -14,7 +14,7 @@ import { PlayerContext } from 'context/AudioPlayer';
 import { getEpisode, getAllEpisodeWithSlug } from 'lib/graphcms'
 import Head from 'next/head'
 
-export default function Episode({ currentEpisode }) {
+const Episode = ({ currentEpisode }) => {
 
   const {
     state: { playing, episode },
@@ -27,7 +27,7 @@ export default function Episode({ currentEpisode }) {
     }
   }, []);
   
-  return (
+  return currentEpisode ? (
     <Layout>
       <Head>
         <title>{currentEpisode.title} | Dialogue Radio</title>
@@ -58,8 +58,10 @@ export default function Episode({ currentEpisode }) {
           </InnerContainer>
       </Container>
     </Layout>
-  )
-}
+  ) : (
+    <p>Loading…</p>
+  );
+};
 
 export async function getStaticPaths() {
   const episodes = await getAllEpisodeWithSlug()
@@ -77,3 +79,5 @@ export async function getStaticProps({ params }) {
     props: { currentEpisode:data.episode }
   }
 }
+
+export default Episode;
