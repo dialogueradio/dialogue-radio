@@ -4,6 +4,11 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+@font-face {
+  font-family: "Poetsen One";
+  src: url('https://fonts.cdnfonts.com/s/31868/PoetsenOne-Regular.woff') format('woff');
+}
+
 @layer utilities {
   .bg-wave {
     background-image: url(https://res.cloudinary.com/dialogue-radio/image/upload/v1622023285/wave_p672kt_bpiryo.svg);

@@ -102,6 +102,9 @@ const Episode = ({ episodes }) => {
                   </div>
                 </div>
               </div>
+              <span className="absolute right-0 z-0 leading-none -bottom-1.5 pr-30 md:pr-80 text-7xl text-beige opacity-20 font-poetsen">
+                {('000' + episode.slug).slice( -3 )}
+              </span>
             </div>
           </a>
         </Link>

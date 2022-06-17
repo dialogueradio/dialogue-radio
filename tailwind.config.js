@@ -2,6 +2,9 @@ module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
     extend: {
+      fontFamily: {
+        'poetsen': ['Poetsen One', 'sans-serif'],
+      },
       colors: {
         'primary': '#FFC700',
         'secondary': '#ffde6a',
