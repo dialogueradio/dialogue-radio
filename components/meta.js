@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { existsGaId, GA_ID } from '../lib/gtag'
 import { HOME_OG_IMAGE_URL } from '../lib/constants'
 
 export default function Meta() {
@@ -14,23 +13,6 @@ export default function Meta() {
       <link rel="shortcut icon" href="/favicons/favicon.ico" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
-      {/* Google Analytics */}
-      {existsGaId && (
-        <>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_ID}', {
-                page_path: window.location.pathname,
-              });`,
-            }}
-          />
-        </>
-      )}
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"

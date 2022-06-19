@@ -1,29 +1,20 @@
 import { useEffect, useReducer } from 'react'
-import App from 'next/app'
-import { useRouter } from 'next/router'
 import { PlayerProvider, initialState, reducer } from "../context/AudioPlayer";
+import TagManager from 'react-gtm-module';
 import AudioPlayer from "../components/audio-player";
-
 import '../styles/index.css'
-import * as gtag from '../lib/gtag'
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  // Google Tag Manager
   useEffect(() => {
-    if (!gtag.existsGaId) {
-      return
-    }
+    TagManager.initialize({ gtmId: 'GTM-58CFTZG' })
+  }, [])
 
-    const handleRouteChange = (path) => {
-      gtag.pageview(path)
-    }
+  useEffect(() => {
+    document.body.classList?.remove('loading')
+  }, [])
 
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
-  
+  // Audio player
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
