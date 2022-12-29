@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Poetsen One";
-  src: url('https://fonts.cdnfonts.com/s/31868/PoetsenOne-Regular.woff') format('woff');
+  src: url('https://res.cloudinary.com/dialogue-radio/raw/upload/v1672292608/PoetsenOne-Regular_jnmo25.ttf') format('woff');
 }
 
 @layer utilities {
