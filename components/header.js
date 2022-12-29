@@ -12,7 +12,9 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
     <div className={`flex items-center text-gray-300 lg:w-auto ${ menuIsOpen ? "fixed top-0 left-0 right-0 py-6 mx-5 w-auto border-b-2 border-white border-opacity-50" : "w-full"}`}>
       <Link href="/">
         <a>
-          <img src={`${ menuIsOpen ? "/logo-white.svg" : "/logo.svg"}`} className="w-56 lg:w-64" alt="ダイアログラジオ"/>
+          <h1 className="text-3xl text-gray5 font-poetsen">Dialogue Radio</h1>
+          <p className="text-sm font-bold text-gray5">多様なライフストーリーに出会う場所</p>
+          {/*<img src={`${ menuIsOpen ? "/logo-white.svg" : "/logo.svg"}`} className="w-56 lg:w-64" alt="ダイアログラジオ"/>*/}
         </a>
       </Link>
       <div className="visible ml-auto lg:invisible">
@@ -30,10 +32,10 @@ const LogoBlock = ({ toggleMenu, menuIsOpen }) => {
 
 const MenuBlock = ({ menuIsOpen }) => {
   const links = [
-    { href: "/", label: "エピソード" },
-    { href: "/posts", label: "ブログ" },
-    { href: "/members", label: "メンバー" },
-    { href: "/storytellers", label: "ストーリーテラー" },
+    { href: "/", label1: "Episode", label2: "エピソード" },
+    { href: "/posts", label1: "Blog", label2: "ブログ" },
+    { href: "/members", label1: "Member", label2: "メンバー" },
+    { href: "/storytellers", label1: "Storytellr", label2: "ストーリーテラー" },
   ].map(link => ({
     ...link,
     key: `nav-link-${link.href}-${link.label}`
@@ -44,10 +46,13 @@ const MenuBlock = ({ menuIsOpen }) => {
       <div className={`flex flex-wrap w-full lg:ml-auto xl:w-9/12 lg:w-11/12 ${ menuIsOpen ? "flex-col" : ""}`}>
         <ul
           className="flex flex-wrap items-center justify-around flex-grow w-full px-8 my-4 font-bold bg-darkgray-800 box-border lg:bg-transparent lg:mx-0 lg:pl-0 lg:pr-5 lg:my-0 lg:w-auto">
-          {links.map(({ key, href, label }) => (
+          {links.map(({ key, href, label1, label2 }) => (
             <li key={key} className={`w-full text-white lg:w-auto lg:py-auto ${ menuIsOpen ? "text-xl py-4" : "nav-underline py-2"}`} >
               <Link href={href}>
-                <a className="text-current">{label}</a>
+                <a className="text-current">
+                  <p className="text-sm font-poetsen">{label1}</p>
+                  <p>{label2}</p>
+                </a>
               </Link>
             </li>
           ))}

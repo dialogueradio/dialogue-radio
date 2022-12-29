@@ -24,15 +24,16 @@ const Episode = ({ episodes }) => {
       {episodes.map((episode) => (
         <Link key={episode.slug} as={`/episodes/${episode.slug}`} href={`/episodes/${episode.slug}`}>
           <a>
-            <div className="relative px-4 py-5 pb-6 mb-6 bg-white rounded-lg md:p-6 md:mb-10 md:rounded-xl md:flex md:justify-between duration-150 hover:shadow-xl">
+            <div className="relative mb-6 bg-white rounded-lg md:mb-10 md:rounded-xl duration-150 hover:shadow-xl">
               {episodes[0].episodeNumber === episode.episodeNumber ? (
-                <div className="badge-layout md:badge-layout-lg">
+                <div className="z-10 badge-layout md:badge-layout-lg">
                   <div className="badge-base md:badge-base-lg">
                     <div className="bage-src badge-bg md:badge-bg-lg"></div>
                     <span className="text-xs badge-label md:text-base">NEW</span>
                   </div>
                 </div>
               ) : ( "" )}
+              <div className="relative px-4 py-5 pb-6 overflow-hidden md:p-6 md:flex md:justify-between">
               <div className="md:w-4/6">
                 <DateDuration date={episode.date} audioDuration={episode.audioDuration} />
                 <div className="flex items-center mt-2 mb-3">
@@ -102,9 +103,10 @@ const Episode = ({ episodes }) => {
                   </div>
                 </div>
               </div>
-              <span className="absolute right-0 z-0 leading-none -bottom-1.5 pr-30 md:pr-80 text-7xl text-beige opacity-20 font-poetsen">
+              <span className="absolute right-0 z-0 leading-none -bottom-2 pr-30 md:pr-80 text-7xl text-beige opacity-20 font-poetsen">
                 {('000' + episode.slug).slice( -3 )}
               </span>
+              </div>
             </div>
           </a>
         </Link>

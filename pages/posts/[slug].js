@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
 import Container from 'components/container'
 import Sidebar from 'components/sidebar'
 import MainContent from 'components/main-content'
@@ -18,10 +17,6 @@ import Head from 'next/head'
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
 
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
-
   return (
     <Layout preview={preview}>
       <Container>
@@ -35,7 +30,7 @@ export default function Post({ post, morePosts, preview }) {
                   <PostInfo tags={post.tags} author={post.author} />
                 </Sidebar>
                 <MainContent>
-                  <article className="py-6 px-5 md:p-12 bg-white rounded-xl">
+                  <article className="px-5 py-6 bg-white md:p-12 rounded-xl">
                     <Head>
                       <title>{post.title} | Dialogue Radio</title>
                     </Head>
@@ -63,7 +58,7 @@ export async function getStaticPaths() {
     paths: posts.map(({ slug }) => ({
       params: { slug },
     })),
-    fallback: true,
+    fallback: false,
   }
 }
 
